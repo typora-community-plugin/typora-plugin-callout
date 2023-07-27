@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "name": "typora-community-plugin.callout",
+  "version": "",
+  "description": "",
+  "type": "module",
+  "main": "",
+  "scripts": {
+    "build:dev": "node build.js",
+    "build": "node build.js --prod",
+    "pack": "pnpm run build && node pack.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jquery": "3.3.1",
+    "@types/lodash": "~4.14.196",
+    "@types/node": "16.18.0",
+    "@typora-community-plugin/core": "^2.0.0-beta.6",
+    "archiver": "^5.3.1",
+    "esbuild": "^0.18.17",
+    "esbuild-plugin-typora": "npm:@typora-community-plugin/esbuild-plugin-typora@^1.0.3",
+    "esbuild-sass-plugin": "^2.10.0",
+    "iconv-lite": "0.6.3"
+  }
+}

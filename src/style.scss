@@ -1,0 +1,139 @@
+#write .typ-callout,
+#write .typ-callout:hover {
+  padding: .5rem 1rem;
+  border-left-style: solid;
+  border-left-color: rgba(var(--callout-color), 0.65);
+  color: inherit;
+  background-color: rgb(71, 77, 84, .035);
+}
+
+.typ-callout {
+  &>:first-child {
+    font-weight: 500;
+    color: rgb(var(--callout-color));
+
+    background-color: rgba(var(--callout-color), 0.1);
+    box-shadow: 0 0 0 1rem rgba(var(--callout-color), 0.1);
+    margin: .5rem 0 2rem 0;
+
+    &:last-child {
+      margin-bottom: .5rem;
+    }
+
+    &::before {
+      content: var(--callout-icon);
+      display: inline-block;
+      min-width: 1rem;
+      text-align: center;
+    }
+  }
+
+  &.typ-callout--folded {
+
+    &>:first-child {
+      margin-bottom: .5rem;
+
+      &::after {
+        content: "\22EF";
+        padding: .5rem;
+
+        font-size: large;
+        font-weight: 600;
+        color: gray;
+      }
+    }
+
+    &> :not(:first-child) {
+      display: none;
+    }
+  }
+}
+
+
+.typ-callout {
+
+  &[data-callout] {
+    --callout-color: 8, 109, 221;
+  }
+
+  &[data-callout=note] {
+    --callout-icon: '✏';
+  }
+
+  &[data-callout=abstract],
+  &[data-callout=summary],
+  &[data-callout=tldr] {
+    --callout-color: 0, 191, 188;
+    --callout-icon: '📋';
+  }
+
+  &[data-callout=info] {
+    --callout-icon: 'ℹ️';
+  }
+
+  &[data-callout=todo] {
+    --callout-icon: '✔';
+  }
+
+  &[data-callout=tip],
+  &[data-callout=hint],
+  &[data-callout=important] {
+    --callout-color: 0, 191, 188;
+    --callout-icon: '🔥';
+  }
+
+  &[data-callout=success],
+  &[data-callout=check],
+  &[data-callout=done] {
+    --callout-color: 8, 185, 78;
+    --callout-icon: '✅';
+  }
+
+  &[data-callout=question],
+  &[data-callout=help],
+  &[data-callout=faq] {
+    --callout-color: 224, 172, 0;
+    --callout-icon: '❓';
+
+    &>ol {
+      list-style-type: upper-alpha;
+    }
+  }
+
+  &[data-callout=warning],
+  &[data-callout=caution],
+  &[data-callout=attention] {
+    --callout-color: 236, 117, 0;
+    --callout-icon: '⚠';
+  }
+
+  &[data-callout=failure],
+  &[data-callout=fail],
+  &[data-callout=missing] {
+    --callout-color: 233, 49, 71;
+    --callout-icon: '❌';
+  }
+
+  &[data-callout=danger],
+  &[data-callout=error] {
+    --callout-color: 233, 49, 71;
+    --callout-icon: '⚡';
+  }
+
+  &[data-callout=bug],
+  &[data-callout=issue] {
+    --callout-color: 233, 49, 71;
+    --callout-icon: '🐛';
+  }
+
+  &[data-callout=example] {
+    --callout-color: 120, 82, 238;
+    --callout-icon: '📚';
+  }
+
+  &[data-callout=quote],
+  &[data-callout=cite] {
+    --callout-color: 158, 158, 158;
+    --callout-icon: '💬';
+  }
+}
