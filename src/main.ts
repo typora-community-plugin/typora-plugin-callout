@@ -1,5 +1,5 @@
+import './style.scss'
 import { Plugin } from '@typora-community-plugin/core'
-import * as _ from 'lodash'
 
 
 export default class extends Plugin {
