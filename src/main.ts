@@ -21,7 +21,7 @@ export default class extends Plugin {
 }
 
 function render() {
-  return Array.from(document.querySelectorAll('blockquote > :first-child'))
+  return Array.from(document.querySelectorAll('#write [mdtype="blockquote"] > :first-child'))
     .map((p: HTMLElement) => {
       const blockquote = p.parentElement!
       const [, type, foldStatus] = p.textContent!.match(/^\[!(\w+)\]([+-]?)/) ?? []

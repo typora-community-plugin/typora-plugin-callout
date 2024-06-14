@@ -1,5 +1,13 @@
 # Callout
 
+## Github Style Alert in Typora 1.8
+
+> [!Note] 
+>
+> Content
+
+## Plugin callouts
+
 > Blockquote
 
 > [!note] Title

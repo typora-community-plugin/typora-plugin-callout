@@ -5,7 +5,7 @@
   "author": "plylrnsdy",
   "authorUrl": "https://github.com/plylrnsdy",
   "repo": "typora-community-plugin/typora-plugin-callout",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "minAppVersion": "1.5.0",
   "minCoreVersion": "2.0.0-beta.31",
   "platforms": ["win32", "linux", "darwin"]
