@@ -24,6 +24,7 @@ export default class extends Plugin {
   }
 
   onunload() {
+    $('#write .typ-callout').removeClass('typ-callout')
   }
 }
 
